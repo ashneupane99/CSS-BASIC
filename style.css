@@ -1,0 +1,82 @@
+/* p{
+    color:blue;
+} */
+/* using id as a sekector is by using # infront */
+/* id gets more priority as a selector over class . */
+/* #fifth{
+    color: purple;
+} */
+
+/* using class as a selector is by using .  */
+/* .pg{
+    color: aqua;
+} */
+
+/* giving css style to a whole section and it applies to all sections within the page unless seperate id or class is passed */
+section{
+    background: rgb(176, 217, 217);
+    color: white;
+}
+/* ======================== */
+/* Element selectors */
+/* Decendent (space) is used to change the style of a child element from a parent element(inside a section) */
+section p {
+    color: green;
+}
+
+/* child is deployed using > sign and only child element of parent are affected not the grandchildren */
+section > p {
+    color: blue;
+    text-decoration: line-through;
+}
+
+/* adjacent is deployed using + (only paragraph after the section is affected)*/
+section + p {
+    font-size: 30px;
+}
+
+/* Siblings is deployed using ~  */
+section ~ p {
+    font-size: 20px;
+    background: pink;
+}
+/* to just deploy into a paragraph inside a section  */
+section div p{
+    color: yellow;
+}
+
+/* ====================================================== */
+/* Attribute selector:
+[Attribute]
+[Attribute= "value"]
+element[Attribute] */
+[href]{
+    text-decoration: none;
+    color: yellow;
+    font-size: 25px;
+}
+
+[href="google.com"]{
+    color: maroon
+}
+
+/* pseudo element selector */
+/* syntax
+selector: pseudo-element{
+    property:value;
+    } */
+
+p::first-letter{
+    font-size: 32px;
+    font-weight: bolder;
+} /*  this code changes first letter of every paragraph  */
+
+
+/* pseudo class selector */
+/* hover changes the style of the content in the page when we point our mouse to the applied point  */
+a:hover{
+    font-size: 32px;
+}
+p:nth-child(1){
+    background-color: red;
+}
